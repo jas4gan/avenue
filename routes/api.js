@@ -2,11 +2,7 @@ var express = require("express");
 var router = express.Router();
 const bodyParser = require("body-parser");
 const db = require("../model/helper");
-<<<<<<< HEAD
 const hellosign = require('hellosign-sdk')({ key: '7150cf6254b928355fb88dd8fb225d385b7c59464ea38df8bd591052391c9307' });
-=======
-
->>>>>>> c352ff4ec9dc0dafca4bcad84a0961376f29aefb
 
 router.use(bodyParser.json());
 
@@ -83,7 +79,6 @@ router.put("/propertymgmt/properties/:property_id", (req, res) => {
     .catch(err => res.status(500).send(err));
 });
 
-<<<<<<< HEAD
 //Create signature request
 router.post("/callback", (req, res,json) => {
   const data = req.body.json;
@@ -107,28 +102,25 @@ router.post("/callback", (req, res,json) => {
   };
   hellosign.signatureRequest.createEmbedded(opts).then((res) => {
     // handle response
+    const signature = res.signature_request.signatures[0];
+    const signatureId = signature.signature_id;
+    return hellosign.embedded.getSignUrl(signatureId);
+  }).then((res) => {
+    console.log('The sign url: ' + res.embedded.sign_url);
   }).catch((err) => {
     // handle error
-  });  
+  });
+  
 })
 
-// router.get("/callback", (req, res, json) => {
-//   // const signatureId = "144b874099e72db739a2ae429c3d99b"
-
-//   hellosign.signatureRequest.createEmbedded(opts).then((res) => {
-//     const signature = res.signature_request.signatures[0];
-//     const signatureId = signature.signature_id;
-  
-//     return hellosign.embedded.getSignUrl(signatureId);
-//   }).then((res) => {
-//     console.log('The sign url: ' + res.embedded.sign_url);
-//   }).catch((err) => {
-//     // handle error
-//   });
-  
-// })
+/* router.get(`/embedded/sign_url/:signature_id`, (req, res, json) => {  
+  const signatureId = req.params.signature_id;
+  hellosign.embedded.getSignUrl(signatureId).then((res) => {
+    console.log('The sign url is: ' + res.embedded.sign_url);
+  }).catch((err) => {
+    // handle error
+  });
+}) */
 
 
-=======
->>>>>>> c352ff4ec9dc0dafca4bcad84a0961376f29aefb
 module.exports = router;

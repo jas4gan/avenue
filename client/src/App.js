@@ -6,7 +6,7 @@ import Layout from "./component/Layout/Layout";
 import List from "./component/List/List";
 import NewList from "./component/NewList/NewList";
 import EditList from "./component/EditList/EditList";
-
+import HelloSign from "hellosign-embedded";
 
 class App extends React.Component {
   constructor(props) {
@@ -158,14 +158,13 @@ class App extends React.Component {
     }
   }
 
-<<<<<<< HEAD
   signHandler() {
     console.log("Sign here please...");
     const client = new HelloSign({
       clientId: "0ce014a59e087c76d07bb63819c363e9"
     });
     console.log("what's in client: ", client);
-    client.open("https://app.hellosign.com/editor/embeddedSign?signature_id=a1c5e0d4a34d836239d90e6158beab9c&token=9803ada0f43511c9424a6002f971b08f", {
+    client.open("https://app.hellosign.com/editor/embeddedSign?signature_id=e1d3dade7e8f058cfa040b181d6e68e3&token=c80d494dcf1221a9a31ff7a03d7ac236", {
       allowCancel: true,
       skipDomainVerification: true,
       testMode: true
@@ -176,8 +175,6 @@ class App extends React.Component {
     })
     
 }  
-=======
->>>>>>> c352ff4ec9dc0dafca4bcad84a0961376f29aefb
 
   editingHandler(property) {
     console.log("edit handler", this.state.editing.isEditable);
@@ -214,14 +211,9 @@ class App extends React.Component {
     return (
       <div>        
           <Layout
-<<<<<<< HEAD
           logoutbtn={this.logoutHandler}
           newbtn={this.addingHandler}
           signbtn={this.signHandler}
-=======
-            logoutbtn={this.logoutHandler}
-          newbtn={this.addingHandler}  
->>>>>>> c352ff4ec9dc0dafca4bcad84a0961376f29aefb
           >
           </Layout>
           <div className="row m-5">
