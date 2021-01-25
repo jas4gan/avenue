@@ -7,7 +7,6 @@ import List from "./component/List/List";
 import NewList from "./component/NewList/NewList";
 import EditList from "./component/EditList/EditList";
 
-import HelloSign from "hellosign-embedded";
 
 class App extends React.Component {
   constructor(props) {
@@ -147,6 +146,7 @@ class App extends React.Component {
     alert("work saved! logged out");
   }
 
+  
   addingHandler() {
     console.log("adding", this.state.adding);
     if (this.state.adding) {
@@ -158,6 +158,7 @@ class App extends React.Component {
     }
   }
 
+<<<<<<< HEAD
   signHandler() {
     console.log("Sign here please...");
     const client = new HelloSign({
@@ -175,6 +176,8 @@ class App extends React.Component {
     })
     
 }  
+=======
+>>>>>>> c352ff4ec9dc0dafca4bcad84a0961376f29aefb
 
   editingHandler(property) {
     console.log("edit handler", this.state.editing.isEditable);
@@ -209,14 +212,18 @@ class App extends React.Component {
     const vacancyRate = (vacancy / numProperties * 100).toFixed(2);
 
     return (
-      <div>
+      <div>        
           <Layout
+<<<<<<< HEAD
           logoutbtn={this.logoutHandler}
           newbtn={this.addingHandler}
           signbtn={this.signHandler}
+=======
+            logoutbtn={this.logoutHandler}
+          newbtn={this.addingHandler}  
+>>>>>>> c352ff4ec9dc0dafca4bcad84a0961376f29aefb
           >
           </Layout>
-
           <div className="row m-5">
             <div className="col-2">
                 <div className="card-body text-light text-center bg-primary mb-3 rounded">
