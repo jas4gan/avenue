@@ -212,8 +212,9 @@ class App extends React.Component {
       <div>        
           <Layout
           // logoutbtn={this.logoutHandler}
-          newbtn={this.addingHandler}
-          signbtn={this.signHandler}
+
+            logoutbtn={this.logoutHandler}
+            newbtn={this.addingHandler}  
           >
           </Layout>
           <div className="row m-5">

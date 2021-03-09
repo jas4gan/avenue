@@ -12,13 +12,14 @@ export default class Facebook extends Component {
     }
 
     responseFacebook = response => {
-        if(response.status !== 'unknown')
+        if (response.status !== 'unknown') {
             this.setState({
                 isLoggedIn: true,
                 name: response.name,
                 picture: response.picture.data.url
             });
-            
+        }
+        //authenticate on fb use try and catch
     }
 
     componentClicked = () => console.log("clicked");
