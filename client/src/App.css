@@ -34,7 +34,7 @@
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   border-radius: 0.25rem;
-  color: #212529;
+  color: white;
   background-color: -internal-light-dark(rgb(239, 239, 239), rgb(59, 59, 59));
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;

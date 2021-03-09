@@ -142,9 +142,9 @@ class App extends React.Component {
     // console.log("This property id was deleted", id);
   }
 
-  logoutHandler() {
-    alert("work saved! logged out");
-  }
+  // logoutHandler() {
+  //   alert("work saved! logged out");
+  // }
 
   
   addingHandler() {
@@ -211,7 +211,7 @@ class App extends React.Component {
     return (
       <div>        
           <Layout
-          logoutbtn={this.logoutHandler}
+          // logoutbtn={this.logoutHandler}
           newbtn={this.addingHandler}
           signbtn={this.signHandler}
           >

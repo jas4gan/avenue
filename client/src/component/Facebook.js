@@ -43,12 +43,15 @@ export default class Facebook extends Component {
                     }}
                 >
                     
-                <FacebookLogin
-                    appId="748745212426220"
-                    autoLoad={false}
-                    fields="name,email,picture"
-                    onClick={this.componentClicked}
-                    callback={this.responseFacebook} />
+                    <FacebookLogin
+                        appId="748745212426220"
+                        autoLoad={false}
+                        fields="name,email,picture"
+                        onClick={this.componentClicked}
+                        callback={this.responseFacebook}
+                        cssClass="kep-login-facebook kep-login-facebook-small"
+                        textButton="Login with Facebook"
+                    />
                     </div>
             );
             
