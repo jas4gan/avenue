@@ -1,12 +1,6 @@
 # Avenue
 
-![Logo](images/)
-
 Avenue is a full stack application that streamlines property information in one place. Built for property managers to service overseas property owners.
-
-## Demo
-
-![Demo](images/)
 
 ## To use this app, uou will need to install
 
@@ -44,7 +38,7 @@ Run `yarn` in avenue folder to install dependencies related to Express.
 
 Open a **new** terminal window and run `node model/database.js` in avenue root folder. This will create a table called 'properties' in your database.
 
-`cd client` and run `yarn` in client folder to install dependencies related to React. Run `yarn add react`.
+`cd client` and run `yarn` in client folder to install dependencies related to client.
 
 ### Run Development Servers
 
@@ -58,7 +52,7 @@ Open a **new** terminal window and run `node model/database.js` in avenue root f
 
 ## Features
 
-![Features](images/)
+![Features](support/dashboard_feature_ext.png)
 
 ## Built With
 
@@ -66,14 +60,6 @@ Open a **new** terminal window and run `node model/database.js` in avenue root f
 - Node/Express.
 - Vue.
 - Bootstrap.
-
-## Database Schema
-
-![Schema](images/)
-
-## API Routes Plan
-
-![Routes](images/)
 
 ## Credit
 
